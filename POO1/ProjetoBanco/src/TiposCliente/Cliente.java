@@ -6,11 +6,6 @@ public abstract class Cliente {
     protected int numConta;
     protected double saldoConta;
 
-    public abstract void depositar(double depositar);
-
-    public abstract void sacar(double sacar);
-
-    public abstract void exibirSaldo ();
 
     public String getNomeCliente() {
         return nomeCliente;

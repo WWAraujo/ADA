@@ -1,6 +1,6 @@
 package TiposCliente;
 
-public class PessoaJuridica extends Cliente {
+public class PessoaJuridica extends Cliente implements Conta{
 
 
     @Override
