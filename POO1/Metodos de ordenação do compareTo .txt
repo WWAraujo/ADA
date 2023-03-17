@@ -1,0 +1,7 @@
+The sorting algorithm used is a Dual-Pivot Quicksort. 
+But for Collections.sort (objects)Timsort algorithm is used. 
+Does it mean that Java uses different algorithms based on data type/ input data ranges
+
+https://www.linkedin.com/pulse/java-collectionssort-arrayssort-under-hood-surinder-kumar-mehra/
+
+https://static.javatpoint.com/images/java-collection-hierarchy.png

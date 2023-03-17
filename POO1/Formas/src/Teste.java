@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.UUID;
 
 public class Teste {
-
+    
     private static final Integer TAMANHO_VETOR = 100000;
 
     public static void main(String[] args) throws IOException {
