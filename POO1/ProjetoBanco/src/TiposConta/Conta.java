@@ -1,4 +1,4 @@
-package TiposCliente;
+package TiposConta;
 
 public interface Conta {
 

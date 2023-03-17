@@ -1,6 +1,8 @@
 package TiposCliente;
 
-public class PessoaJuridica extends Cliente implements Conta{
+import TiposConta.Conta;
+
+public class PessoaJuridica extends Cliente implements Conta {
 
 
     @Override
