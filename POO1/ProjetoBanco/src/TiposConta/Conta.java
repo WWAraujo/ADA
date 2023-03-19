@@ -2,10 +2,13 @@ package TiposConta;
 
 public interface Conta {
 
-    public abstract void depositar(double depositar);
+    public abstract void Depositar(double depositar, int tipoConta);
 
-    public abstract void sacar(double sacar);
+    public abstract void Sacar(double sacar);
 
-    public abstract void exibirSaldo ();
+    public abstract void ExibirSaldo();
+
+    public abstract void Tranaferir();
+
 
 }

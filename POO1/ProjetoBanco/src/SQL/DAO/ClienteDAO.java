@@ -2,7 +2,7 @@ package SQL.DAO;
 
 public class ClienteDAO {
 
-    public static String url = "jdbc:mysql://localhost:3306/lojaWRS";
+    public static String url = "jdbc:mysql://localhost:3306/BancoADA";
     public static String login = "root";
     public static String senha = "";
 

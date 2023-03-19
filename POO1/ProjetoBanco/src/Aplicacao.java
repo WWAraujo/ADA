@@ -1,7 +1,5 @@
 import TiposCliente.PessoaFisisca;
 import TiposCliente.PessoaJuridica;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Aplicacao {
@@ -21,6 +19,7 @@ public class Aplicacao {
 
         Imprimir("Digite o numero da conta: ");
         int numeroConta = Integer.parseInt(scanner.nextLine());
+
 
 
     }
