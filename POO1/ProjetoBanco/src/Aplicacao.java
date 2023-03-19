@@ -1,7 +1,5 @@
 import TiposCliente.PessoaFisisca;
 import TiposCliente.PessoaJuridica;
-import TiposConta.ContaCorrente;
-import TiposConta.ContaPoupanca;
 
 import java.util.Locale;
 import java.util.Scanner;
