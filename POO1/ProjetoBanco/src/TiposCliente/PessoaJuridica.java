@@ -4,7 +4,7 @@ import TiposConta.Conta;
 
 public class PessoaJuridica extends Cliente implements Conta{
     @Override
-    public void Depositar(double depositar, int tipoConta) {
+    public void depositar(double depositar, int tipoConta) {
         if(tipoConta == 1) {
             System.out.println("Voce não tem conta poupanca");
         } else if(tipoConta == 2) {
@@ -24,7 +24,7 @@ public class PessoaJuridica extends Cliente implements Conta{
         }
     }
     @Override
-    public void Sacar(double sacar, int tipoConta) {
+    public void sacar(double sacar, int tipoConta) {
 
         double valorSacarComJuros = sacar * 1.005 ;
 
@@ -51,7 +51,7 @@ public class PessoaJuridica extends Cliente implements Conta{
         }
     }
     @Override
-    public void Transferir(double transferir, int tipoConta) {
+    public void transferir(double transferir, int tipoConta) {
 
         double valorTransferirComJuros = transferir * 1.005 ;
 
@@ -78,7 +78,7 @@ public class PessoaJuridica extends Cliente implements Conta{
         }
     }
     @Override
-    public void ExibirSaldo(int tipoConta) {
+    public void exibirSaldo(int tipoConta) {
 
         if(tipoConta == 1) {
             System.out.println("Voce não tem conta poupanca");

@@ -14,7 +14,7 @@ public class ContaCorrente extends Cliente {
     }
 
     @Override
-    public void ExibirSaldo(int tipoConta) {
+    public void exibirSaldo(int tipoConta) {
         System.out.println(getSaldoContaCorrente());
     }
 }

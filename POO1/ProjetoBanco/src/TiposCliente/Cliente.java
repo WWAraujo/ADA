@@ -32,7 +32,7 @@ public abstract class Cliente {
     }
 
     public void setSaldoContaPoupanca(double saldoContaPoupanca) {
-        this.saldoContaPoupanca = saldoContaPoupanca;
+        this.saldoContaPoupanca = this.saldoContaPoupanca + saldoContaPoupanca ;
     }
 
     public String getNomeCliente() {
@@ -51,7 +51,7 @@ public abstract class Cliente {
         this.numConta = numConta;
     }
 
-    public abstract void ExibirSaldo(int tipoConta);
+    public abstract void exibirSaldo(int tipoConta);
 
 //    public double getSaldoConta() {
 //        return saldoContaPoupanca;

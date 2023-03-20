@@ -4,22 +4,25 @@ import TiposConta.Conta;
 
 public class PessoaFisisca extends Cliente implements Conta {
     @Override
-    public void Depositar(double depositar, int tipoConta) {
+    public void depositar(double depositar, int tipoConta) {
         if(tipoConta == 1) {
-            double novoValor = getSaldoContaPoupanca() + depositar;
-            super.setSaldoContaPoupanca(getSaldoContaPoupanca());
+            // poupaca
+            super.setSaldoContaPoupanca(depositar);
         } else if(tipoConta == 2) {
+            // investimento
             double novoValor = getSaldoContaInvestimento() + depositar;
-            super.setSaldoContaInvestimento(getSaldoContaInvestimento());
+            super.setSaldoContaInvestimento(novoValor);
         } else if(tipoConta == 3) {
+            //conta corrente
             double novoValor = getSaldoContaCorrente() + depositar;
-            super.setSaldoContaInvestimento(getSaldoContaCorrente());
-        } else {
-            System.out.println("Erro no tipo da conta");
+            super.setSaldoContaInvestimento(novoValor);
         }
+
+        System.out.println(getSaldoContaPoupanca());
+
     }
     @Override
-    public void Sacar(double sacar, int tipoConta) {
+    public void sacar(double sacar, int tipoConta) {
 
         double valorSacarComJuros = sacar ; //Não tem juros.
 
@@ -44,7 +47,7 @@ public class PessoaFisisca extends Cliente implements Conta {
         }
     }
     @Override
-    public void Transferir(double transferir, int tipoConta) {
+    public void transferir(double transferir, int tipoConta) {
 
         double valorTransferirComJuros = transferir ;
 
@@ -71,19 +74,11 @@ public class PessoaFisisca extends Cliente implements Conta {
         }
     }
     @Override
-    public void ExibirSaldo(int tipoConta) {
+    public void exibirSaldo(int tipoConta) {
 
-        if(tipoConta == 1) {
-            System.out.println(super.getSaldoContaPoupanca());
-        } else if(tipoConta == 2) {
-            //            Conta Investimento
-            System.out.println(super.getSaldoContaInvestimento());
-        } else if(tipoConta == 3) {
-            //            Conta Corrente
-            System.out.println(getSaldoContaCorrente());
-        } else {
-            System.out.println("Não entendi o numero da conta!");
-        }
+        System.out.println("Saldo Conta Poupança "+ getSaldoContaPoupanca());
+        System.out.println("Saldo Conta Ivestimento "+ getSaldoContaInvestimento());
+        System.out.println("Saldo Conta Corrente "+ getSaldoContaCorrente());
 
     }
 }
