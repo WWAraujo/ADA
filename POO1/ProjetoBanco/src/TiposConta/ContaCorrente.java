@@ -7,9 +7,14 @@ public class ContaCorrente extends Cliente {
     @Override
     public String toString() {
         return "ContaCorrente{" +
-                "nomeCliente='" + nomeCliente + '\'' +
-                ", numConta=" + numConta +
-                ", saldoConta=" + saldoConta +
+                "nomeCliente='" + getNomeCliente() + '\'' +
+                ", numConta=" + getNumConta() +
+                ", saldoConta=" + getSaldoContaCorrente() +
                 '}';
+    }
+
+    @Override
+    public void ExibirSaldo(int tipoConta) {
+        System.out.println(getSaldoContaCorrente());
     }
 }

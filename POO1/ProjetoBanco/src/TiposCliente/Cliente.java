@@ -2,10 +2,38 @@ package TiposCliente;
 
 public abstract class Cliente {
 
-    protected String nomeCliente;
-    protected int numConta;
-    protected double saldoConta;
+    private String nomeCliente;
+    private int numConta;
+    private double saldoContaPoupanca;
 
+    private double saldoContaInvestimento;
+
+    private double saldoContaCorrente;
+
+
+    public double getSaldoContaCorrente() {
+        return saldoContaCorrente;
+    }
+
+    public void setSaldoContaCorrente(double saldoContaCorrente) {
+        this.saldoContaCorrente = saldoContaCorrente;
+    }
+
+    public double getSaldoContaInvestimento() {
+        return saldoContaInvestimento;
+    }
+
+    public void setSaldoContaInvestimento(double saldoContaInvestimento) {
+        this.saldoContaInvestimento = saldoContaInvestimento;
+    }
+
+    public double getSaldoContaPoupanca() {
+        return saldoContaPoupanca;
+    }
+
+    public void setSaldoContaPoupanca(double saldoContaPoupanca) {
+        this.saldoContaPoupanca = saldoContaPoupanca;
+    }
 
     public String getNomeCliente() {
         return nomeCliente;
@@ -23,11 +51,13 @@ public abstract class Cliente {
         this.numConta = numConta;
     }
 
-    public double getSaldoConta() {
-        return saldoConta;
-    }
+    public abstract void ExibirSaldo(int tipoConta);
 
-    public void setSaldoConta(double saldoConta) {
-        this.saldoConta = saldoConta;
-    }
+//    public double getSaldoConta() {
+//        return saldoContaPoupanca;
+//    }
+//
+//    public void setSaldoConta(double saldoConta) {
+//        this.saldoContaPoupanca = saldoConta;
+//    }
 }
