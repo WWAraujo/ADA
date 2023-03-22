@@ -3,6 +3,7 @@ package TiposCliente;
 import TiposConta.Conta;
 
 public class PessoaJuridica extends Cliente implements Conta{
+
     @Override
     public void depositar(double depositar, int tipoConta) {
         if(tipoConta == 1) {
@@ -59,6 +60,7 @@ public class PessoaJuridica extends Cliente implements Conta{
             }
         }
     }
+
     @Override
     public void transferir(double transferir, int tipoContaOrigem, int tipoContaDestino) {
 
@@ -90,6 +92,7 @@ public class PessoaJuridica extends Cliente implements Conta{
             }
         }
     }
+
     @Override
     public void exibirSaldo(int tipoConta) {
 

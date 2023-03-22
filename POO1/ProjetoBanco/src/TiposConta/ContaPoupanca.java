@@ -12,6 +12,7 @@ public class ContaPoupanca extends Cliente {
                 ", saldoConta=" + getSaldoContaPoupanca() +
                 '}';
     }
+
     @Override
     public void exibirSaldo(int tipoConta) {
         System.out.println(super.getSaldoContaPoupanca());

@@ -5,8 +5,6 @@ import TiposCliente.PessoaFisisca;
 
 public class ContaInvestimento extends Cliente{
 
-    PessoaFisisca pf = new PessoaFisisca();
-
     public String toString() {
         return "ContaCorrente{" +
                 "nomeCliente='" + getNomeCliente() + '\'' +
