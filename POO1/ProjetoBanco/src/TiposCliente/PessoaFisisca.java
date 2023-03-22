@@ -10,22 +10,23 @@ public class PessoaFisisca extends Cliente implements Conta {
             super.setSaldoContaPoupanca(depositar);
             System.out.println("Deposito na conta poupança feito com sucesso!");
             System.out.println("Seu saldo é R$ "+getSaldoContaPoupanca());
-        } else if(tipoConta == 2) {
+        }else if(tipoConta == 2) {
             // investimento
             double novoValor = getSaldoContaInvestimento() + depositar;
             super.setSaldoContaInvestimento(novoValor);
             System.out.println("Deposito na conta investimento feito com sucesso!");
             System.out.println("Seu saldo é R$ "+getSaldoContaInvestimento());
-        } else if(tipoConta == 3) {
+        }else if(tipoConta == 3) {
             //conta corrente
             double novoValor = getSaldoContaCorrente() + depositar;
             super.setSaldoContaCorrente(novoValor);
             System.out.println("Deposito na conta Corrente feito com sucesso!");
             System.out.println("Seu saldo é R$ "+getSaldoContaCorrente());
+        }else {
+            System.out.println("Não entendi o numero da conta!");
         }
-
-
     }
+
     @Override
     public void sacar(double sacar, int tipoConta) {
 
