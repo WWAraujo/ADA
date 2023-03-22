@@ -2,7 +2,7 @@ package TiposCliente;
 
 import TiposConta.Conta;
 
-public class PessoaFisisca extends Cliente implements Conta {
+public class PessoaFisica extends Cliente implements Conta {
 
     @Override
     public void depositar(double depositar, int tipoConta) {

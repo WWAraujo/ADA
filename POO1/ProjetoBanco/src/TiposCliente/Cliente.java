@@ -11,32 +11,32 @@ public abstract class Cliente {
     private double saldoContaCorrente;
 
 
-    public double getSaldoContaCorrente() {
+    protected double getSaldoContaCorrente() {
         return saldoContaCorrente;
     }
 
-    public void setSaldoContaCorrente(double saldoContaCorrente) {
+    protected void setSaldoContaCorrente(double saldoContaCorrente) {
 
         this.saldoContaCorrente = saldoContaCorrente;
     }
 
-    public double getSaldoContaInvestimento() {
+    protected double getSaldoContaInvestimento() {
         return saldoContaInvestimento;
     }
 
-    public void setSaldoContaInvestimento(double saldoContaInvestimento) {
+    protected void setSaldoContaInvestimento(double saldoContaInvestimento) {
         this.saldoContaInvestimento = saldoContaInvestimento;
     }
 
-    public double getSaldoContaPoupanca() {
+    protected double getSaldoContaPoupanca() {
         return saldoContaPoupanca;
     }
 
-    public void setSaldoContaPoupanca(double saldoContaPoupanca) {
+    protected void setSaldoContaPoupanca(double saldoContaPoupanca) {
         this.saldoContaPoupanca = saldoContaPoupanca ;
     }
 
-    public String getNomeCliente() {
+    protected String getNomeCliente() {
         return nomeCliente;
     }
 
@@ -44,7 +44,7 @@ public abstract class Cliente {
         this.nomeCliente = nomeCliente;
     }
 
-    public int getNumConta() {
+    protected int getNumConta() {
         return numConta;
     }
 
@@ -52,6 +52,6 @@ public abstract class Cliente {
         this.numConta = numConta;
     }
 
-    public abstract void exibirSaldo(int tipoConta);
+    protected abstract void exibirSaldo(int tipoConta);
 
 }

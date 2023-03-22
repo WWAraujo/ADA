@@ -98,8 +98,8 @@ public class PessoaJuridica extends Cliente implements Conta{
 
         String[] mostrarSaldoArray = new String[3];
 //        mostrarSaldoArray[0] ="Saldo Conta Poupança    R$ "+ getSaldoContaPoupanca();
-        mostrarSaldoArray[1] ="Saldo Conta Ivestimento R$ "+ getSaldoContaInvestimento();
-        mostrarSaldoArray[2] ="Saldo Conta Corrente    R$ "+ getSaldoContaCorrente();
+        mostrarSaldoArray[0] ="Saldo Conta Ivestimento R$ "+ getSaldoContaInvestimento();
+        mostrarSaldoArray[1] ="Saldo Conta Corrente    R$ "+ getSaldoContaCorrente();
 
         for ( String i : mostrarSaldoArray) {
             System.out.println(i);
