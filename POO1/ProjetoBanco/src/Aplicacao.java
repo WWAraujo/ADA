@@ -84,6 +84,7 @@ public class Aplicacao {
 
         System.out.println(matriz[linha]);
     }
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
