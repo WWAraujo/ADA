@@ -231,7 +231,6 @@ public class Aplicacao {
             return valorDigitado;
         } catch (Exception exception){
             System.out.println("ERRO - Valor digitado nao é um numero!");
-            System.out.println();
         }
         return 0;
     }
@@ -239,12 +238,15 @@ public class Aplicacao {
     public static int escolhaMenu(int menor, int maior){
 
         Scanner scanner = new Scanner(System.in);
-
-        int conta = Integer.parseInt(scanner.nextLine());
-
-        while (conta < menor || conta > maior){
-            conta = Integer.parseInt(entradaValor() +"");
-            break;
+        int conta = 0;
+        try {
+            conta = Integer.parseInt(scanner.nextLine());
+            while (conta < menor || conta > maior){
+                conta = Integer.parseInt(entradaValor() +"");
+                break;
+            }
+        } catch (Exception exception){
+            System.out.println("ERRO - Valor digitado nao é um numero! \n");
         }
         return conta;
     }
