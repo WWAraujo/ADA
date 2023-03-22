@@ -128,16 +128,7 @@ public class Aplicacao {
                         "3) Transferir \n" +
                         "4) Exibir Saldo");
 
-                int odf = Integer.parseInt(scanner.nextLine());
-
-                if (odf < 1 || odf > 4){
-                    boolean saida = true;
-                    do {
-                        odf = Integer.parseInt(entradaValor() +"");
-                        saida = false;
-                        break;
-                    } while (saida);
-                }
+                int odf = escolhaMenu(1,4);
 
                 if (conta == 1 ){
                     // Tipo da conta Poupanca
@@ -220,17 +211,13 @@ public class Aplicacao {
         imprimir("Qual conta quer abrir ? \n" +
                             "1) Pessoa Fisica \n" +
                             "2) Pessoa Jurídica");
-
         int conta = Integer.parseInt(scanner.nextLine());
 
         if (conta == 1 ){
             return 1;
-//            PessoaFisisca pf = new PessoaFisisca();
         } else if (conta == 2 ){
             return 2;
-//            PessoaJuridica pj = new PessoaJuridica();
         } else {
-//            Imprimir("Digite:\n 1) Para Pessoa Fisica \n 2) Para Pessoa Jurídica ");
             abrirConta();
         }
         return 0;

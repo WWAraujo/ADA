@@ -54,11 +54,4 @@ public abstract class Cliente {
 
     public abstract void exibirSaldo(int tipoConta);
 
-//    public double getSaldoConta() {
-//        return saldoContaPoupanca;
-//    }
-//
-//    public void setSaldoConta(double saldoConta) {
-//        this.saldoContaPoupanca = saldoConta;
-//    }
 }
