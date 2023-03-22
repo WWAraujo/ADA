@@ -16,6 +16,7 @@ public abstract class Cliente {
     }
 
     public void setSaldoContaCorrente(double saldoContaCorrente) {
+
         this.saldoContaCorrente = saldoContaCorrente;
     }
 

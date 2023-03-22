@@ -8,17 +8,22 @@ public class PessoaFisisca extends Cliente implements Conta {
         if(tipoConta == 1) {
             // poupaca
             super.setSaldoContaPoupanca(depositar);
+            System.out.println("Deposito na conta poupança feito com sucesso!");
+            System.out.println("Seu saldo é R$ "+getSaldoContaPoupanca());
         } else if(tipoConta == 2) {
             // investimento
             double novoValor = getSaldoContaInvestimento() + depositar;
             super.setSaldoContaInvestimento(novoValor);
+            System.out.println("Deposito na conta investimento feito com sucesso!");
+            System.out.println("Seu saldo é R$ "+getSaldoContaInvestimento());
         } else if(tipoConta == 3) {
             //conta corrente
             double novoValor = getSaldoContaCorrente() + depositar;
-            super.setSaldoContaInvestimento(novoValor);
+            super.setSaldoContaCorrente(novoValor);
+            System.out.println("Deposito na conta Corrente feito com sucesso!");
+            System.out.println("Seu saldo é R$ "+getSaldoContaCorrente());
         }
 
-        System.out.println(getSaldoContaPoupanca());
 
     }
     @Override
@@ -26,14 +31,27 @@ public class PessoaFisisca extends Cliente implements Conta {
 
         double valorSacarComJuros = sacar ; //Não tem juros.
 
-        if(tipoConta == 2) {
+        if (tipoConta == 1){
+            if (getSaldoContaPoupanca() >= valorSacarComJuros) {
+
+//                double valorAtual = super.getSaldoContaInvestimento();
+//                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
+                super.setSaldoContaPoupanca(super.getSaldoContaPoupanca() - valorSacarComJuros);
+            } else {
+                System.out.println("Não tem saldo suficiente na conta poupanca!");
+                System.out.println("Seu saldo é: ");
+                exibirSaldo(1);
+            }
+        }else if(tipoConta == 2) {
             if (getSaldoContaInvestimento() >= valorSacarComJuros) {
 
 //                double valorAtual = super.getSaldoContaInvestimento();
 //                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
                 super.setSaldoContaInvestimento(super.getSaldoContaInvestimento() - valorSacarComJuros);
             } else {
-                System.out.println("Não tem saldo suficiente");
+                System.out.println("Não tem saldo suficiente na conta Investimento!");
+                System.out.println("Seu saldo é: ");
+                exibirSaldo(1);
             }
         } else if (tipoConta == 3) {
 
@@ -42,7 +60,9 @@ public class PessoaFisisca extends Cliente implements Conta {
 //                double novoValor = super.getSaldoContaCorrente() - valorSacarComJuros;
                 super.setSaldoContaCorrente(super.getSaldoContaCorrente() - valorSacarComJuros);
             } else {
-                System.out.println("Não tem saldo suficiente");
+                System.out.println("Não tem saldo suficiente na conta corrente!");
+                System.out.println("Seu saldo é: ");
+                exibirSaldo(1);
             }
         }
     }
@@ -76,9 +96,14 @@ public class PessoaFisisca extends Cliente implements Conta {
     @Override
     public void exibirSaldo(int tipoConta) {
 
-        System.out.println("Saldo Conta Poupança "+ getSaldoContaPoupanca());
-        System.out.println("Saldo Conta Ivestimento "+ getSaldoContaInvestimento());
-        System.out.println("Saldo Conta Corrente "+ getSaldoContaCorrente());
+        String[] mostrarSaldoArray = new String[3];
+        mostrarSaldoArray[0] ="Saldo Conta Poupança    R$ "+ getSaldoContaPoupanca();
+        mostrarSaldoArray[1] ="Saldo Conta Ivestimento R$ "+ getSaldoContaInvestimento();
+        mostrarSaldoArray[2] ="Saldo Conta Corrente    R$ "+ getSaldoContaCorrente();
+
+        for ( String i : mostrarSaldoArray) {
+            System.out.println(i);
+        }
 
     }
 }

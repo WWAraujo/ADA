@@ -80,16 +80,13 @@ public class PessoaJuridica extends Cliente implements Conta{
     @Override
     public void exibirSaldo(int tipoConta) {
 
-        if(tipoConta == 1) {
-            System.out.println("Voce não tem conta poupanca");
-        } else if(tipoConta == 2) {
-            //            Conta Investimento
-            System.out.println(super.getSaldoContaInvestimento());
-        } else if(tipoConta == 3) {
-            //            Conta Corrente
-            System.out.println(getSaldoContaCorrente());
-        } else {
-            System.out.println("Não entendi o numero da conta!");
+        String[] mostrarSaldoArray = new String[3];
+//        mostrarSaldoArray[0] ="Saldo Conta Poupança    R$ "+ getSaldoContaPoupanca();
+        mostrarSaldoArray[1] ="Saldo Conta Ivestimento R$ "+ getSaldoContaInvestimento();
+        mostrarSaldoArray[2] ="Saldo Conta Corrente    R$ "+ getSaldoContaCorrente();
+
+        for ( String i : mostrarSaldoArray) {
+            System.out.println(i);
         }
 
     }

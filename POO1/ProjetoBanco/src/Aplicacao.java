@@ -13,11 +13,12 @@ public class Aplicacao {
                     " Seja bem vindo ao baco do Wallace " +
                     "===================================");
 
-        imprimir("Qual o seu nome? ");
+        imprimir("     Qual o seu nome?           ");
         String nome = scanner.nextLine();
 
         imprimir("===================================");
-        System.out.println("Olá "+nome);
+        System.out.println("    Olá, "+nome);
+        imprimir("===================================");
 
         int numeroConta =0;
 
@@ -48,7 +49,7 @@ public class Aplicacao {
 
         int conta = Integer.parseInt(scanner.nextLine());
 
-        if (conta < 1 || conta > 2){
+        if (conta < 1 || conta > 3){
             boolean saida = true;
             do {
                 conta = Integer.parseInt(entradaValor() +"");
