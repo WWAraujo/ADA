@@ -37,6 +37,8 @@ public class PessoaFisisca extends Cliente implements Conta {
 //                double valorAtual = super.getSaldoContaInvestimento();
 //                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
                 super.setSaldoContaPoupanca(super.getSaldoContaPoupanca() - valorSacarComJuros);
+                System.out.println("Seu saldo é: "+getSaldoContaPoupanca());
+
             } else {
                 System.out.println("Não tem saldo suficiente na conta poupanca!");
                 System.out.println("Seu saldo é: ");
@@ -48,6 +50,7 @@ public class PessoaFisisca extends Cliente implements Conta {
 //                double valorAtual = super.getSaldoContaInvestimento();
 //                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
                 super.setSaldoContaInvestimento(super.getSaldoContaInvestimento() - valorSacarComJuros);
+                System.out.println("Seu saldo é R$ "+getSaldoContaInvestimento());
             } else {
                 System.out.println("Não tem saldo suficiente na conta Investimento!");
                 System.out.println("Seu saldo é: ");
@@ -59,6 +62,7 @@ public class PessoaFisisca extends Cliente implements Conta {
 //                double valorAtual = super.getSaldoContaCorrente();
 //                double novoValor = super.getSaldoContaCorrente() - valorSacarComJuros;
                 super.setSaldoContaCorrente(super.getSaldoContaCorrente() - valorSacarComJuros);
+                System.out.println("Seu saldo é R$ "+getSaldoContaCorrente());
             } else {
                 System.out.println("Não tem saldo suficiente na conta corrente!");
                 System.out.println("Seu saldo é: ");
@@ -67,29 +71,45 @@ public class PessoaFisisca extends Cliente implements Conta {
         }
     }
     @Override
-    public void transferir(double transferir, int tipoConta) {
+    public void transferir(double transferir, int tipoContaOrigem, int tipoContaDestino) {
 
-        double valorTransferirComJuros = transferir ;
+        double valorTransferirComJuros = transferir * 1;
 
-        if(tipoConta == 2) {
+        if(tipoContaOrigem == 1) {
+            if (getSaldoContaPoupanca() >= valorTransferirComJuros) {
+
+//                double valorAtual = super.getSaldoContaInvestimento();
+//                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
+                super.setSaldoContaPoupanca(super.getSaldoContaPoupanca() - valorTransferirComJuros);
+                depositar(valorTransferirComJuros,tipoContaDestino);
+                System.out.println("Tranferencia feita com sucesso! ");
+                System.out.println("Seu saldo é: "+getSaldoContaPoupanca());
+            } else {
+                System.out.println("Não tem saldo suficiente na sua conta poupança");
+            }
+        } else if(tipoContaOrigem == 2) {
             if (getSaldoContaInvestimento() >= valorTransferirComJuros) {
 
 //                double valorAtual = super.getSaldoContaInvestimento();
 //                double novoValor = super.getSaldoContaInvestimento() - valorSacarComJuros;
                 super.setSaldoContaInvestimento(super.getSaldoContaInvestimento() - valorTransferirComJuros);
+                depositar(valorTransferirComJuros,tipoContaDestino);
                 System.out.println("Tranferencia feita com sucesso! ");
+                System.out.println("Seu saldo é: "+getSaldoContaInvestimento());
             } else {
-                System.out.println("Não tem saldo suficiente");
+                System.out.println("Não tem saldo suficiente na sua conta investimento");
             }
-        } else if (tipoConta == 3) {
+        } else if (tipoContaOrigem == 3) {
 
             if (getSaldoContaCorrente() >= valorTransferirComJuros) {
 //                double valorAtual = super.getSaldoContaCorrente();
 //                double novoValor = super.getSaldoContaCorrente() - valorSacarComJuros;
                 super.setSaldoContaCorrente(super.getSaldoContaCorrente() - valorTransferirComJuros);
+                depositar(valorTransferirComJuros,tipoContaDestino);
                 System.out.println("Tranferencia feita com sucesso! ");
+                System.out.println("Seu saldo é: "+getSaldoContaCorrente());
             } else {
-                System.out.println("Não tem saldo suficiente");
+                System.out.println("Não tem saldo suficiente na sua conta eorrente");
             }
         }
     }

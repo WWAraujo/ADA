@@ -8,6 +8,6 @@ public interface Conta {
 
     public abstract void exibirSaldo(int tipoConta);
 
-    public abstract void transferir(double transferir, int tipoConta);
+    public abstract void transferir(double transferir, int tipoContaOrigem, int tipoContaDestino);
 
 }

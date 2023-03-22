@@ -51,11 +51,11 @@ public class PessoaJuridica extends Cliente implements Conta{
         }
     }
     @Override
-    public void transferir(double transferir, int tipoConta) {
+    public void transferir(double transferir, int tipoContaOrigem, int tipoContaDestino) {
 
         double valorTransferirComJuros = transferir * 1.005 ;
 
-        if(tipoConta == 2) {
+        if(tipoContaOrigem == 2) {
             if (getSaldoContaInvestimento() >= valorTransferirComJuros) {
 
 //                double valorAtual = super.getSaldoContaInvestimento();
@@ -65,7 +65,7 @@ public class PessoaJuridica extends Cliente implements Conta{
             } else {
                 System.out.println("Não tem saldo suficiente");
             }
-        } else if (tipoConta == 3) {
+        } else if (tipoContaOrigem == 3) {
 
             if (getSaldoContaCorrente() >= valorTransferirComJuros) {
 //                double valorAtual = super.getSaldoContaCorrente();
