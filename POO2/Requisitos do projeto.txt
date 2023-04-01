@@ -1,0 +1,20 @@
+entity = Entidade são os modelos 
+factory = Responsável por criar intancia de algum tipo
+service = Responsável por criar classes de serviços 
+
+Criar um sistema de gerenciamento de vendas:
+- Cadastro de produtos (nome, preço unitario de venda, qtde em estoque)
+- Realizar venda 
+	- Data e hora, produtos vendidos com quantidade, valor total da venda
+	- Dados do cliente (Pode ser pessoa Fisica ou Juridica)
+	- Imprimir dados da venda (Recibo)
+- Validaçoes:
+	- Nao permitir cadastrar um produto sem nome e preço unitario de venda
+	- No momento da venda, validar se a quantidade do produto existe em estoque
+	- .... ?
+Requisitos de avaliaçao:
+- Utilizaçao correta da orientaçao a objetos (Polimorfismo, Herança, Encapsulamento e Abstraçao)
+- Utilizaçao correta de Collections
+- Utilizaçao correta de Exceptions
+
+https://app.diagrams.net/

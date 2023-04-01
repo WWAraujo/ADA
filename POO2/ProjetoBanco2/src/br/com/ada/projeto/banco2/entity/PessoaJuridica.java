@@ -1,4 +1,4 @@
-package br.com.ada.projeto.banco2;
+package br.com.ada.projeto.banco2.entity;
 
 public class PessoaJuridica extends Pessoa{
 
