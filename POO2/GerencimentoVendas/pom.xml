@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>br.com.ada.poo2</groupId>
-  <artifactId>GerencimentoVendas</artifactId>
+  <artifactId>GerenciamentoVendas</artifactId>
   <packaging>war</packaging>
   <properties>
     <maven.compiler.source>20</maven.compiler.source>
@@ -32,6 +32,12 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+      <dependency>
+          <groupId>org.jetbrains</groupId>
+          <artifactId>annotations</artifactId>
+          <version>RELEASE</version>
+          <scope>compile</scope>
+      </dependency>
 
   </dependencies>
 
