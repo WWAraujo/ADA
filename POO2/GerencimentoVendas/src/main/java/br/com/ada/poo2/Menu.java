@@ -1,5 +1,7 @@
 package br.com.ada.poo2;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Menu {
@@ -9,6 +11,32 @@ public class Menu {
         String entrada = scanner.nextLine();
         return entrada;
     }
+
+    public static Integer entradaNumero () {
+        int numero = 0 ;
+        try {
+            numero = Integer.parseInt(scanner());
+        }catch (Exception exception){
+            System.out.println("Digite apenas numero.");
+            entradaNumero();
+        }
+        return numero;
+    }
+
+    public static Integer qtdVendida () {
+        System.out.println("Digite a quantidade para colocar no carrinho.");
+        int quantidadeVendida = entradaNumero();
+        return quantidadeVendida;
+    }
+
+    public static Integer incluirItenListaCarrinho () {
+        System.out.println("Deseja iserir mais itens no carrinho? \n" +
+                "1 - SIM \n" +
+                "2 - Finalizar Venda.");
+        int finalizarVenda = entradaNumero();
+        return finalizarVenda;
+    }
+
     public static void menu(){
 
         TipoPessoa pessoa = new TipoPessoa();
@@ -18,8 +46,10 @@ public class Menu {
         Craindo um banco de dados para o estoque
          */
         Estoque estoque = new Estoque();
+
         int usarEstoque = usarEstoque();
         int continuar;
+
         if (usarEstoque == 1 ){
             estoque.iniciarEstoqueTeste();
         } else {
@@ -40,18 +70,27 @@ public class Menu {
         /*
         Usando o carrinho
          */
-        Carrinho venda = new Carrinho();
+
         System.out.println("Bem vindo "+pessoa.getNome()+". ");
 
-        Produto produto ;
+        Map<String,Produto> listaItensVenda = new HashMap<>();
+        Produto produto;
 
         do {
-            produto = controlarEstoque(estoque);
+            produto =  estoque.pedirItenEstoque();
         } while (produto == null);
-        venda.incluirProdutosCarrinho(produto);
 
-        System.out.println("Deseja iserir mais itens no carrinho ?");
-        venda.finalizarVenda();
+        listaItensVenda.put(produto.getNome(), produto);
+
+        while (incluirItenListaCarrinho() == 1){
+            produto =  estoque.pedirItenEstoque();
+            listaItensVenda.put(produto.getNome(), produto);
+            System.out.println("Deseja iserir mais itens no carrinho? \n" +
+                    "1 - SIM \n" +
+                    "2 - Finalizar Venda. \n");
+        }
+
+        Carrinho.finalizarVenda(listaItensVenda,pessoa);
     }
 
     public static int usarEstoque (){
@@ -65,40 +104,7 @@ public class Menu {
         return resp;
     }
 
-    public static Produto controlarEstoque(Estoque estoque){
 
-        estoque.mostrarIntensnoEstoque();
-
-        System.out.println("Digite o nome do produto que deseja inserir.");
-        String keyProduto = scanner();
-
-        Produto produto = estoque.procurarItem(keyProduto);
-
-        int menuerro = 0;
-        if (produto == null){
-            System.out.println("O que deseja fazer? \n" +
-                    "1 - Mostrar estoque novamente? \n" +
-                    "2 - Tentar Inserir novemente? \n" +
-                    "3 - Sair");
-            menuerro = Integer.parseInt(scanner());
-        }
-
-        switch (menuerro) {
-            case 1 :
-                estoque.mostrarIntensnoEstoque();
-                break;
-            case 2 :
-                controlarEstoque(estoque);
-                break;
-            case 3 :
-                System.out.println("Saindo..");
-                break;
-            default:
-                System.out.println("Produto inserido com sucesso");
-                break;
-        }
-        return produto;
-    }
 
 }
 

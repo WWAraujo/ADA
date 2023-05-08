@@ -1,34 +1,41 @@
 package br.com.ada.poo2;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Estoque extends Produto{
+import static br.com.ada.poo2.Menu.qtdVendida;
+import static br.com.ada.poo2.Menu.scanner;
 
-    public Map<String,Produto> estoque;
+public class Estoque extends Produto {
 
-    public Map<String,Produto> adicionarEstoque(Produto produto){
+    public static Map<String, Produto> estoque;
 
-        if (estoque == null) {
-            estoque = new HashMap<>();
+    public void adicionarEstoque(Produto produto) {
+
+        if (produto != null) {
+            if (estoque == null) {
+                estoque = new HashMap<>();
+            }
+            estoque.put(produto.getNome(), produto);
+            System.out.println("Adicionado ao estoque com sucesso!");
         }
-        estoque.put(produto.getNome(),produto);
-        return estoque;
+        System.out.println("Erro produto vazio");
     }
 
-    public void mostrarIntensnoEstoque(){
-        int contador = 1;
-        for (String pdt : estoque.keySet())
-            System.out.println(contador+" - "+pdt);
-        contador++;
+    public static void mostrarIntensnoEstoque() {
+        for (Map.Entry<String, Produto> entry : estoque.entrySet()) {
+            System.out.println(entry.getValue().getQtdEstoque() + ":" + entry.getKey());
+        }
     }
 
-    public Produto procurarItem(String nome){
+    public static Produto procurarProduto(String nome) {
 
         Produto pdt = estoque.get(nome);
 
-        if (pdt == null){
+        if (pdt == null) {
             System.out.println("Produto não encontrado");
         } else {
             return pdt;
@@ -36,28 +43,85 @@ public class Estoque extends Produto{
         return null;
     }
 
-    public void removerEstoque(String nome, int qtd){
+    public static void removerEstoque(String nome, int qtd) {
         int novoQtd = estoque.get(nome).getQtdEstoque() - qtd;
 
         Produto novoProduto = estoque.get(nome);
         novoProduto.setQtdEstoque(novoQtd);
 
-        estoque.remove(nome);
         estoque.put(novoProduto.getNome(), novoProduto);
     }
 
-    public Map<String, Produto> retornoEstoque(){
-        return estoque;
+    /**
+     *
+      * @return null não tem estoque suficiente
+     */
+    private static @Nullable Produto controlarEstoque() {
+
+        mostrarIntensnoEstoque();
+
+        System.out.println("Digite o nome do produto que deseja inserir.");
+        String keyProduto = scanner();
+
+        Produto produto = procurarProduto(keyProduto);
+
+        int menuerro = 0;
+
+        if (produto == null) {
+            System.out.println("Produto não encontrado, o que deseja fazer? \n" +
+                    "1 - Mostrar estoque novamente? \n" +
+                    "2 - Tentar procurar outro produto? \n" +
+                    "3 - Sair");
+            menuerro = Integer.parseInt(scanner());
+        }
+
+        switch (menuerro) {
+            case 1:
+                mostrarIntensnoEstoque();
+                break;
+            case 2:
+                controlarEstoque();
+                break;
+            case 3:
+                System.out.println("Saindo..");
+                break;
+            default:
+                System.out.println("Produto encontrado");
+                break;
+        }
+
+        System.out.println("Qual a quantidade de produto?");
+        int qtdVendida = Menu.entradaNumero();
+        int qtdEstoque = produto.getQtdEstoque();
+        if ((qtdEstoque - qtdVendida) >= 0) {
+
+            estoque.put(produto.getNome(), produto);
+
+            produto.setQtdEstoque(qtdVendida);
+
+            return produto;
+
+        } else {
+            System.out.println("Não tem estoque suficiente.");
+            mostrarIntensnoEstoque();
+        }
+        System.out.println("Não tem estoque suficiente");
+        return null;
     }
 
-    public Map<String, Produto> iniciarEstoqueTeste(){
+    public static Produto pedirItenEstoque () {
+        Produto produto = controlarEstoque();
+        return produto;
+    }
 
-        if (estoque == null){
+    public Map<String, Produto> iniciarEstoqueTeste() {
+
+        if (estoque == null) {
             estoque = new HashMap<>();
         }
-        estoque.put("Arroz",( new CadastrarProduto().cadastrarProduto("Arroz",10, BigDecimal.valueOf(21.10))));
-        estoque.put("Feijão",( new CadastrarProduto().cadastrarProduto("Feijão",15, BigDecimal.valueOf(21.10))));
-        estoque.put("Macarrão",( new CadastrarProduto().cadastrarProduto("Macarrão",20, BigDecimal.valueOf(21.10))));
+        estoque.put("Arroz", (new CadastrarProduto().cadastrarProduto("Arroz", 10, BigDecimal.valueOf(21.10))));
+        estoque.put("Feijão", (new CadastrarProduto().cadastrarProduto("Feijão", 15, BigDecimal.valueOf(11.50))));
+        estoque.put("Macarrão", (new CadastrarProduto().cadastrarProduto("Macarrão", 20, BigDecimal.valueOf(6.90))));
 
         return estoque;
     }

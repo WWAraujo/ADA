@@ -2,51 +2,67 @@ package br.com.ada.poo2;
 
 import java.util.*;
 
+import static br.com.ada.poo2.Estoque.procurarProduto;
 import static br.com.ada.poo2.FinalizarVenda.finalizar;
 
 
 public class Carrinho {
 
-    private Map<String,Produto> item;
+    private Map<String,Produto> venda;
     private Pessoa cliente;
 
-    public Map<String, Produto> getItem() {
-        return item;
+    public Map<String, Produto> getVenda() {
+        return venda;
     }
 
-    public void setItem(Map<String, Produto> item) {
-        this.item = item;
+    public void setVenda(Map<String, Produto> venda) {
+        this.venda = venda;
     }
+
 
     public void icluirListaCarrinho(Pessoa pessoa, Map<String, Produto> vendaInicial){
         cliente = pessoa;
-        if (item == null){
-            item = new HashMap<>();
-            item.putAll(vendaInicial);
+        if (venda == null){
+            venda = new HashMap<>();
+            venda.putAll(vendaInicial);
         } else {
-            item.putAll(vendaInicial);
+            venda.putAll(vendaInicial);
         }
     }
 
-    public Map<String,Produto> incluirProdutosCarrinho (Produto produto) {
-        String key = produto.getNome();
-        int qtdVendida = produto.getQtdEstoque();
-        int sqtEstoque = item.get(key).getQtdEstoque();
-        int novoQtdEstoque = sqtEstoque - qtdVendida;
+    public Map<String,Produto> incluirProdutosCarrinho (String nome, int quantidadeVendida) {
 
-        if (item == null){
-            item = new HashMap<>();
-            item.put(produto.getNome(),produto);
+        String key = nome;
+
+        Produto produto = new Produto();
+
+        int novoQtdEstoque = 0 ;
+
+        try {
+            int qtdVendida = quantidadeVendida;
+            int sqtEstoque = procurarProduto(key).getQtdEstoque();
+            novoQtdEstoque = sqtEstoque - qtdVendida;
+        }catch (Exception exception){
+            System.out.println("Erro no calculo do estoque.");
+        }
+
+        produto.setNome(nome);
+        produto.setQtdEstoque(novoQtdEstoque);
+        if (venda == null){
+            venda = new HashMap<>();
+            venda.put(key,produto);
         } else {
-            if (item.containsKey(key)){
-                item.get(key).setQtdEstoque(novoQtdEstoque);
+            if (venda.containsKey(key)){
+                venda.get(key).setQtdEstoque(novoQtdEstoque);
             }
-            item.put(produto.getNome(),produto);
+            venda.put(produto.getNome(),produto);
         }
-        return item;
+        return venda;
     }
 
-    public void finalizarVenda(){
-        finalizar(item , cliente);
+    public static void finalizarVenda(Map<String, Produto> lista, Pessoa pessoa){
+        finalizar(lista, pessoa);
     }
+
+
 }
