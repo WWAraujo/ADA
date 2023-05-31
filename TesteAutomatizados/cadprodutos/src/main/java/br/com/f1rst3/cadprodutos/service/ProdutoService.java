@@ -4,6 +4,8 @@ import br.com.f1rst3.cadprodutos.model.ProdutoModel;
 import br.com.f1rst3.cadprodutos.repository.ProdutoRepositori;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProdutoService {
 
@@ -32,5 +34,9 @@ public class ProdutoService {
             throw new RuntimeException("ID não encontrado");
         }
         return produtoModel;
+    }
+
+    public List<ProdutoModel> listarTodos(){
+        return produtoRepositori.findAll();
     }
 }

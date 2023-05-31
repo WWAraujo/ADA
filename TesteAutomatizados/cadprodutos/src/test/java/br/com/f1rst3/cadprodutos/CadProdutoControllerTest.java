@@ -10,12 +10,15 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 
+import java.util.List;
+
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class CadClienteControllerTest {
+public class CadProdutoControllerTest {
 
     @Autowired
     TestRestTemplate restTemplate;
@@ -38,6 +41,73 @@ public class CadClienteControllerTest {
         org.junit.jupiter.api.Assertions.assertNotNull(responseDto.getBody().getId());
         org.junit.jupiter.api.Assertions.assertEquals(requestDto.getNome(), responseDto.getBody().getNome());
         org.junit.jupiter.api.Assertions.assertEquals(requestDto.getQuantidade(), responseDto.getBody().getQuantidade());
+    }
+
+
+    @Test
+    void listar_todos_produtos() {
+
+        ProdutoSalvarRequestDto requestDto = new ProdutoSalvarRequestDto()
+                .setNome("produto test listar 1")
+                .setQuantidade(10);
+
+        ResponseEntity<ProdutoResponseDto> responseDto =
+                restTemplate.exchange(
+                        "/produtos",
+                        HttpMethod.POST,
+                        new HttpEntity<>(requestDto),
+                        ProdutoResponseDto.class);
+
+        Long idProduto1 = responseDto.getBody().getId();
+
+        requestDto = new ProdutoSalvarRequestDto()
+                .setNome("produto test listar 2")
+                .setQuantidade(20);
+
+        responseDto =
+                restTemplate.exchange(
+                        "/produtos",
+                        HttpMethod.POST,
+                        new HttpEntity<>(requestDto),
+                        ProdutoResponseDto.class);
+
+        Long idProduto2 = responseDto.getBody().getId();
+
+        ResponseEntity<List<ProdutoResponseDto>> responseGeDto =
+                restTemplate.exchange(
+                        "/produtos",
+                        HttpMethod.GET,
+                        null,
+                        new ParameterizedTypeReference<List<ProdutoResponseDto>>() {
+                        }
+                );
+
+        List<ProdutoResponseDto> produtoResponseDtoList = responseGeDto.getBody();
+
+        Assertions.assertFalse(produtoResponseDtoList.isEmpty());
+
+        boolean existsProduto1 = false;
+        boolean existsProduto2 = false;
+        for (ProdutoResponseDto produtoResponseDto : produtoResponseDtoList){
+            if (produtoResponseDto.getId().equals(idProduto1)) {
+                existsProduto1 = true;
+            } else if (produtoResponseDto.getId().equals(idProduto2)){
+                existsProduto2 = true;
+            }
+        }
+
+        Assertions.assertTrue(existsProduto1);
+        Assertions.assertTrue(existsProduto2);
+
+        Assertions.assertTrue(
+                produtoResponseDtoList.stream().anyMatch(produtoResponseDto -> produtoResponseDto.getId().equals(idProduto1))
+        );
+
+        Assertions.assertTrue(
+                produtoResponseDtoList.stream().anyMatch(produtoResponseDto -> produtoResponseDto.getId().equals(idProduto2))
+        );
+
+
     }
 
     @Test
