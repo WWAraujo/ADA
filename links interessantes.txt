@@ -1,0 +1,4 @@
+https://docs.oracle.com/cd/E11035_01/wls100/webapp/configurejsp.html#wp162442
+
+anbientes web auotomatizados 
+https://www.thymeleaf.org/
