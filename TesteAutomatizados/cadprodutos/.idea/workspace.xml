@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47b59e32-5a47-496a-b3a8-c7114ac1213d" name="Changes" comment="Projeto ADA">
+      <change afterPath="$PROJECT_DIR$/src/test/java/br/com/f1rst3/cadprodutos/SuiteTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\T-Gamer\Documents\GitHub\ADA\TesteAutomatizados\cadprodutos\htmlReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2Q1VNZkPZQ0IUgy4EZWu5MyRupD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/T-Gamer/Documents/GitHub/ADA/TesteAutomatizados/cadprodutos&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5679e392fececf90e829112fcdb4ec71&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.f1rst3.cadprodutos.dto.response" />
+      <recent name="br.com.f1rst3.cadprodutos.repository" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.f1rst3.cadprodutos.dto.response" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SuiteTest">
+    <configuration name="CadProdutoControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.f1rst3.cadprodutos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.f1rst3.cadprodutos" />
+      <option name="MAIN_CLASS_NAME" value="br.com.f1rst3.cadprodutos.CadProdutoControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadProdutoControllerTest.listar_todos_produtos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.f1rst3.cadprodutos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.f1rst3.cadprodutos" />
+      <option name="MAIN_CLASS_NAME" value="br.com.f1rst3.cadprodutos.CadProdutoControllerTest" />
+      <option name="METHOD_NAME" value="listar_todos_produtos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadProdutoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.f1rst3.cadprodutos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.f1rst3.cadprodutos" />
+      <option name="MAIN_CLASS_NAME" value="br.com.f1rst3.cadprodutos.CadProdutoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadProdutoServiceTest.get_by_id" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.f1rst3.cadprodutos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.f1rst3.cadprodutos" />
+      <option name="MAIN_CLASS_NAME" value="br.com.f1rst3.cadprodutos.CadProdutoServiceTest" />
+      <option name="METHOD_NAME" value="get_by_id" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.f1rst3.cadprodutos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.f1rst3.cadprodutos" />
+      <option name="MAIN_CLASS_NAME" value="br.com.f1rst3.cadprodutos.SuiteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadprodutosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cadprodutos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.f1rst3.cadprodutos.CadprodutosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SuiteTest" />
+        <item itemvalue="JUnit.CadProdutoControllerTest" />
+        <item itemvalue="JUnit.CadProdutoServiceTest" />
+        <item itemvalue="JUnit.CadProdutoControllerTest.listar_todos_produtos" />
+        <item itemvalue="JUnit.CadProdutoServiceTest.get_by_id" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47b59e32-5a47-496a-b3a8-c7114ac1213d" name="Changes" comment="" />
+      <created>1684521035234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684521035234</updated>
+      <workItem from="1684521036386" duration="13268000" />
+      <workItem from="1684778536058" duration="7156000" />
+      <workItem from="1684952127435" duration="108000" />
+      <workItem from="1684952246120" duration="69000" />
+      <workItem from="1685124844829" duration="2635000" />
+      <workItem from="1685138543035" duration="71000" />
+      <workItem from="1685383833472" duration="2276000" />
+      <workItem from="1685544289839" duration="4070000" />
+      <workItem from="1685556618594" duration="4854000" />
+      <workItem from="1685970186870" duration="26000" />
+    </task>
+    <task id="LOCAL-00001" summary="Projeto ADA">
+      <created>1685138608215</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685138608215</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Projeto ADA">
+      <created>1685561601630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685561601630</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Projeto ADA" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projeto ADA" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/br/com/f1rst3/cadprodutos/CadProdutoControllerTest.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_teste_exception.ic" NAME="CadClienteControllerTest.teste_exception Coverage Results" MODIFIED="1684786278153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_inserir_produto_rest.ic" NAME="CadClienteControllerTest.inserir_produto_rest Coverage Results" MODIFIED="1684528626759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadProdutoControllerTest.ic" NAME="CadProdutoControllerTest Coverage Results" MODIFIED="1685562005362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$SuiteTest.ic" NAME="SuiteTest Coverage Results" MODIFIED="1685562272986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_teste_not_found_exception.ic" NAME="CadClienteControllerTest.teste_not_found_exception Coverage Results" MODIFIED="1684786621857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadProdutoServiceTest.ic" NAME="CadProdutoServiceTest Coverage Results" MODIFIED="1685561838210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_deletar_produto.ic" NAME="CadClienteControllerTest.deletar_produto Coverage Results" MODIFIED="1684782343188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest.ic" NAME="CadClienteControllerTest Coverage Results" MODIFIED="1684785968922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_teste_validation_exception.ic" NAME="CadClienteControllerTest.teste_validation_exception Coverage Results" MODIFIED="1684786680406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/cadprodutos$CadClienteControllerTest_get_produto_by_id.ic" NAME="CadClienteControllerTest.get_produto_by_id Coverage Results" MODIFIED="1685550142392" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>br.com.f1rst3.cadprodutos.*</FILTER>
+    </SUITE>
+  </component>
+</project>
